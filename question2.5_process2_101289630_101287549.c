@@ -26,7 +26,7 @@ static int V(int semid){
 }
 
 int main(void){
-    key_t shm_key = 0x5555,  // must match child
+    key_t shm_key = 0x5555;  // must match child
     key_t sem_key = 0x5556;  // any constant key for the SHM segment
 
     // Allocate a shared memory segment large enough for struct Shared
@@ -99,4 +99,5 @@ int main(void){
     printf("[Process2] done; detaching.\n");
     shmdt(sh); // Detach shared memory from child process
     return 0;
+
 }
