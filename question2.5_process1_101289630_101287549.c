@@ -78,9 +78,9 @@ int main(void){
     }
     if(pid == 0){
         // Replace child with external program: Process 2
-        char *argv[] = {"./question2.5_process2_101289630_101287549", NULL};  // Argument list for execv()
+        char *argv[] = {"./process2", NULL};  // Argument list for execv()
         execv(argv[0], argv); // Execute the external program
-        perror("execv question2.5_process2_101289630_101287549");
+        perror("execv process2");
         exit(1);
     }
 
@@ -122,4 +122,5 @@ int main(void){
     shmctl(shmid, IPC_RMID, NULL); // Mark shared memory segment for deletion
     semctl(semid, 0, IPC_RMID);  // Remove semaphore set from the system  
     return 0;    
+
 }
