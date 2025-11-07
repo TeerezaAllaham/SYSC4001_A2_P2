@@ -21,7 +21,7 @@ int main(void){
         exit(1);
     }
     // Parent prints until child terminates, then exits
-    long cycle = 0, // Tracks how many cycles (iterations) have passed
+    long cycle = 0, // Tracks how many cycles have passed
     long value = 0;  // The current number being checked for multiples of 3
     int status = 0;  // Will hold child's termination status
     while(1){

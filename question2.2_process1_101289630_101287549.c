@@ -37,5 +37,4 @@ int main(void){
         ++value;          // Increment value
         nap(100);         // Sleep for 100 milliseconds before next cycle
     }
-
 }
