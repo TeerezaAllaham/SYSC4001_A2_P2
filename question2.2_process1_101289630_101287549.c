@@ -23,7 +23,7 @@ int main(void){
     }
 
     // Parent: Process 1 – multiples of 3, show cycle number
-    long cycle = 0; // Tracks how many cycles (iterations) have passed
+    long cycle = 0; // Tracks how many cycles have passed
     long value = 0;  // The current number being checked for multiples of 3
     while(1){
         // Check if current value is a multiple of 3
@@ -37,4 +37,5 @@ int main(void){
         ++value;          // Increment value
         nap(100);         // Sleep for 100 milliseconds before next cycle
     }
+
 }
