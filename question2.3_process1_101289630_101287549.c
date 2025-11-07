@@ -32,7 +32,7 @@ int main(void){
             printf("[Process1] Child finished (status=%d). Exiting Process1.\n", status);
             break; // Exit the loop; parent will end
         }
-        // Normal work while child is still running
+        // Check if current value is a multiple of 3
         if(value % 3 == 0){
             printf("[Process1] Cycle %ld – %ld is a multiple of 3\n", cycle, value);
         } else {

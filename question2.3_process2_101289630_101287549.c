@@ -11,6 +11,7 @@ int main(void){
     long value = 0;  // The current number being checked for multiples of 3
     // Loop while value is between 0 and 500 (inclusive)
     while(value >= -500){
+        // Check if current value is a multiple of 3
         if(value % 3 == 0){
             printf("[Process2] Cycle %ld – %ld is a multiple of 3\n", cycle, value);
         } else {
