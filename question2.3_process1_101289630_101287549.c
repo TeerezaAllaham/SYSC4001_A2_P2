@@ -15,9 +15,9 @@ int main(void){
     } 
     if(pid == 0){
         // Replace child with external program: Process 2
-        char *argv[] = {"./question2.3_process2_101289630_101287549", NULL};  // Argument list for execv()
+        char *argv[] = {"./process2", NULL};  // Argument list for execv()
         execv(argv[0], argv);  // Execute the external program
-        perror("execv question2.3_process2_101289630_101287549");
+        perror("execv process2");
         exit(1);
     }
     // Parent prints until child terminates, then exits
@@ -44,4 +44,5 @@ int main(void){
         nap(100);         // Sleep for 100 milliseconds before next cycle
     }
     return 0;
+
 }
