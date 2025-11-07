@@ -8,13 +8,17 @@ static void nap(int ms) { usleep((useconds_t)ms*1000); }
 
 int main(void){
     pid_t pid = fork(); // Create a new process using fork()
-    if(pid < 0) { perror("fork"); exit(1); } // Check if fork failed
+    // Check if fork failed
+    if(pid < 0) { 
+        perror("fork");
+         exit(1); 
+    } 
 
     if(pid == 0){
         // Child: exec Process 2 (separate program)
-        char *argv[] = {"./question2.2_process2_101289630_101287549.c", NULL}; // Argument list for execv()
+        char *argv[] = {"./question2.2_process2_101289630_101287549", NULL}; // Argument list for execv()
         execv(argv[0], argv);  // Execute the external program
-        perror("execv question2.2_process2_101289630_101287549.c");
+        perror("execv question2.2_process2_101289630_101287549");
         exit(1);
     }
 
@@ -24,9 +28,9 @@ int main(void){
     while(1){
         // Check if current value is a multiple of 3
         if(value % 3 == 0){
-            printf("[P1 pid=%d] Cycle %ld – %ld is a multiple of 3\n", getpid(), cycle, value);
+            printf("[Process1 pid=%d] Cycle %ld – %ld is a multiple of 3\n", getpid(), cycle, value);
         } else {
-            printf("[P1 pid=%d] Cycle %ld\n", getpid(), cycle);
+            printf("[Process1 pid=%d] Cycle %ld\n", getpid(), cycle);
         }
         fflush(stdout);   // Force output to appear immediately
         ++cycle;          // Increment cycle counter
