@@ -13,7 +13,7 @@ int main(void){
     while(value >= -500){
         // Check if current value is a multiple of 3
         if(value % 3 == 0){
-            printf("[Process2] Cycle %ld – %ld is a multiple of 3\n", cycle, value);
+            printf("[Process2] Cycle %ld - %ld is a multiple of 3\n", cycle, value);
         } else {
             printf("[Process2] Cycle %ld\n", cycle);
         }

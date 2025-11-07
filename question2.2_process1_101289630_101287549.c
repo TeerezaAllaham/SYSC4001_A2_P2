@@ -28,7 +28,7 @@ int main(void){
     while(1){
         // Check if current value is a multiple of 3
         if(value % 3 == 0){
-            printf("[Process1 pid=%d] Cycle %ld – %ld is a multiple of 3\n", getpid(), cycle, value);
+            printf("[Process1 pid=%d] Cycle %ld - %ld is a multiple of 3\n", getpid(), cycle, value);
         } else {
             printf("[Process1 pid=%d] Cycle %ld\n", getpid(), cycle);
         }

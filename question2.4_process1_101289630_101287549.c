@@ -57,7 +57,7 @@ int main(void){
 
         // Print depending on whether c is a multiple of m.
         if(c % m == 0){
-            printf("[Process1] counter=%d – %d is a multiple of %d\n", c, c, m);
+            printf("[Process1] counter=%d - %d is a multiple of %d\n", c, c, m);
         } else {
             printf("[Process1] counter=%d\n", c);
         }

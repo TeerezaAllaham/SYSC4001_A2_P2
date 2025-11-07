@@ -36,7 +36,7 @@ int main(void){
 
         // Print depending on whether c is a multiple of m.
         if(c % m == 0){
-            printf("[P2] counter=%d – %d is a multiple of %d\n", c, c, m);
+            printf("[P2] counter=%d - %d is a multiple of %d\n", c, c, m);
         } else {
             printf("[P2] counter=%d (m=%d)\n", c, m);
         }
