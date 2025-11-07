@@ -7,7 +7,7 @@ static void nap(int ms){ usleep((useconds_t)ms*1000); }
 
 
 int main(void){
-    long cycle = 0, // Tracks how many cycles have passed
+    long cycle = 0; // Tracks how many cycles have passed
     long value = 0;  // The current number being checked for multiples of 3
     // Loop while value is between 0 and 500 (inclusive)
     while(value >= -500){
@@ -24,4 +24,5 @@ int main(void){
     }
     printf("[P2] Reached value %ld < -500. Exiting child.\n", value);
     return 0;
+
 }
